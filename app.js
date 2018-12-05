@@ -9,7 +9,8 @@ let app = new Vue({
         hours:localStorage.getItem('save_hours'),
         minutes:localStorage.getItem('save_minutes'),
         seconds:localStorage.getItem('save_seconds'),
-        isSet:true
+        isSet:true,
+        timerdisplay:''
 
 
     },
@@ -89,7 +90,20 @@ let app = new Vue({
 
           }
 
-        }
+        },
+        countdownTimer:function(){
+
+            this.timerdisplay = this.hours+':'+this.minutes+':'+this.seconds;
+
+            //this.losingTime();
+
+        },
+        //losingTime:function(){
+          //setTimeout(function() {
+            //  this.timerdisplay = this.countdownTimer();
+          //}, 1000);
+        //}
+
 
 
     }

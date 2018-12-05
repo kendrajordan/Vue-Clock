@@ -179,6 +179,10 @@
         </form>
         <p id="time" v-if="isSet"></p>
         <p id="past" v-else>Sorry but this time has passed.</p>
+        <form class='container bg-light'>
+        </form>
+        <button v-on:click.prevent="countdownTimer">countdown</button>
+        <p id="down">{{timerdisplay}}</p>
     </div>
 
     <!-- Optional JavaScript -->
